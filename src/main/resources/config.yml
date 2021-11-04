@@ -7,7 +7,7 @@ commands:
     reload-command: 'mmarketmanage'
 messages:
     no-permission: '&e&lmMarketManage &8| &rУ вас нет &cнужного&f права на эту команду!'
-    plugin-reloaded: '&e&lmMarketManage &8| &rПлагин &cуспещно &fперезагружен!'
+    plugin-reloaded: '&e&lmMarketManage &8| &rПлагин &cуспешно &fперезагружен!'
     contains-chat-msg: '&e&lmMarketManage &8| &rВ вашем слове содержатся &cзапрещенные&f символы!' 
     block-place-deny: '&e&lmMarketManage &8| &rВам &cзапрещено &fставить здесь блоки!'
     block-break-deny: '&e&lmMarketManage &8| &rВам &cзапрещено &fломать здесь блоки!'
@@ -82,3 +82,4 @@ permissions:
     pickup-arrow: "mMarket.pickup-arrow"
     swap-hand: "mMarket.swap-hand"
     change-gamemode: "mMarket.change-gamemode"
+    
