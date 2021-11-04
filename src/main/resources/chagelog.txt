@@ -1,0 +1,4 @@
+1.2
+- Fixed registration of events for 1.9 & 1.12.2
+- New structure for config
+- The plugin is now loaded as the very first

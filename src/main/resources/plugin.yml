@@ -1,0 +1,9 @@
+name: mMarketManage
+main: mMarket.manage.spigot.main.Start
+version: 1.2
+author: mMarketDev
+website: mMarket.top
+
+commands:
+  mMarketManage:
+    description: Reload config

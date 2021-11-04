@@ -1,0 +1,84 @@
+# All rights reserved by mMarket.top
+# vk.com/mMarket - Группа VK
+# t.me/mMarketOfficial - Телеграм
+
+# Не изменять команды (недоработано до конца)
+commands:
+    reload-command: 'mmarketmanage'
+messages:
+    no-permission: '&e&lmMarketManage &8| &rУ вас нет &cнужного&f права на эту команду!'
+    plugin-reloaded: '&e&lmMarketManage &8| &rПлагин &cуспещно &fперезагружен!'
+    contains-chat-msg: '&e&lmMarketManage &8| &rВ вашем слове содержатся &cзапрещенные&f символы!' 
+    block-place-deny: '&e&lmMarketManage &8| &rВам &cзапрещено &fставить здесь блоки!'
+    block-break-deny: '&e&lmMarketManage &8| &rВам &cзапрещено &fломать здесь блоки!'
+    pickup-item-deny: '&e&lmMarketManage &8| &rВы &cне можете &fподнимать предметы!'
+    drop-item-deny: '&e&lmMarketManage &8| &rВы &cне можете &fвыкидывать предметы!'
+    pickup-arrow-deny: '&e&lmMarketManage &8| &rВы &cне можете &fподнимать стрелы!'
+    swap-hand-deny: '&e&lmMarketManage &8| &rВы &cне можете &fиспользовать вторую руку, это отключено на сервере!'
+    change-gamemode-deny: '&e&lmMarketManage &8| &rВы &cне можете &fизменить свой режим игры!'
+    join-info: |-
+        &amMarket.top
+        &bВы находитесь на режиме - Test
+        &cВерсия 0.16.5
+#Блокирует различные эксплоиты и возможно предотвращает использование терминала через чат.
+block-contains-chat:
+  - '../'
+  - './'
+  - '/root'
+  - '/usr'
+  - '/var'
+  - '/log'
+  - 'rm -rf'
+  - 'rm -r'
+  - 'rm -f'
+  - '-winlocker'
+  - '`help'
+  - '../../'
+  - '-code'
+ #
+ # (0 - Отключить, 0 - Включить - По дефолту ничего не включено!)
+ #
+actions:
+   # Взаимодействия с чатом
+    chat-events:
+        join-info-msg: 0 # Включить с информацией при входе
+        disable-join-msg: 0 # Выключить сообщение при входе в глобальный чат
+        disable-quit-msg: 0 # Выключить сообщение при выходе в глобальный чат
+        disable-death-msg: 0 # Выключить сообщение о смерти в чат
+   # Взаимодействия с игроками
+    player-events:
+        swap-hand: 0 # Отключить вторую руку (0.9)
+        recipes-discover: 0 # Отключить рецепты
+        change-gamemode: 0 # Отключил открытие рецептов
+        disable-pvp: 0 # Отключает пвп между энтити
+        godmode: 0 # Бессмертие для всех игроков
+        player-portal-event: 0 # Отключает взаимодейсвие с порталами
+        armorstand-interact: 0 # Отключает взаимодействие с арморстендами
+        ho-hunger: 0 # Отключает голод у игроков
+        drop-item: 0 # Отключает выкидывание предметов    
+        pickup-item: 0 # Отключает поднятие предмметов
+        pickup-arrow: 0 # Отключает поднятие предметов
+   # Взаимодействие с блоками
+    block-events:
+        block-place: 0 # Отключает размещение блоков
+        block-break: 0 # Отключает ломание блоков
+        block-physics: 0 # Отключает физику блоков (песка и т.д)
+        block-burn: 0 # Отключает сгорание блоков
+        leaves-patch: 0 # Отключает опадание листвы
+   # Взаимодействие с дамагом
+    damage-events:
+        fall-damage: 0 # Отключает урон при падении
+        wither-damage-player: 0 # Отключает урон от визеров
+        dragon-damage-player: 0 # Отключает урон от дыхания дракона
+        fire-damage: 0 # Отключает урон от огня
+        anti-drowning: 0 # Отключает урон когда кончится кислород
+        antideathvoid: 0 # Отключает урон от пустоты
+permissions:
+    cmd-reload: "mMarket.reloadplugin"
+    block-place: "mMarket.block-place"
+    block-break: "mMarket.block-break"
+    pickup-item: "mMarket.pickup-item"
+    drop-item: "mMarket.drop-item"
+    pickup-arrow: "mMarket.pickup-arrow"
+    swap-hand: "mMarket.swap-hand"
+    change-gamemode: "mMarket.change-gamemode"
